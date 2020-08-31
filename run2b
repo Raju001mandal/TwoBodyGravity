@@ -1,0 +1,45 @@
+
+set terminal wxt background 'black'
+
+
+
+unset key
+unset tics
+
+unset border
+
+set xrange[-130:10]
+
+set yrange[-5:70]
+
+
+
+set palette model HSV rgbformulae 3,2,2
+
+
+
+
+
+unset colorbox
+
+
+do for [ii=1:2001] {
+     
+     
+     set multiplot layout 1,1
+     
+     
+     plot 'twobody.dat' using 3:4:2 every ::1::ii w l lt 3 lw 2 lc palette
+     plot 'twobody.dat' using 3:4:2 every ::ii::ii w p pt 7 ps 1.5 lc rgb "yellow"
+     
+     
+     plot 'twobody.dat' using 1:2:3 every ::1::ii w l lt 3 lw 2 lc rgb "white"
+     plot 'twobody.dat' using 1:2:3 every ::ii::ii w p pt 7 ps 3 lc rgb "white"
+   
+     unset multiplot
+     
+   
+     
+}
+     
+     
