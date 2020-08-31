@@ -29,8 +29,8 @@ do for [ii=1:1001] {
      set multiplot layout 1,1
      
      
-     plot 'twobody.dat' using 3:4:2 every ::1::ii w l lt 3 lw 2 lc palette
-     plot 'twobody.dat' using 3:4:2 every ::ii::ii w p pt 7 ps 1 lc rgb "yellow"
+     plot 'twobody1.dat' using 3:4:2 every ::1::ii w l lt 3 lw 2 lc palette
+     plot 'twobody1.dat' using 3:4:2 every ::ii::ii w p pt 7 ps 1 lc rgb "yellow"
      
      
      plot 'twobody.dat' using 1:2:3 every ::1::ii w l lt 3 lw 2 lc rgb "white"
